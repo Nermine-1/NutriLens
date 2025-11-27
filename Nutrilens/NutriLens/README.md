@@ -75,6 +75,14 @@ node test-webhook.js path/to/image.jpg
 4. View the detected foods and nutritional information.
 5. Check your meal history on the Dashboard.
 
-## Deployment
+## GitHub Pages Deployment
 
-This project can be deployed to any static hosting service that supports React applications, such as Vercel, Netlify, or GitHub Pages. Build the project using `npm run build` and deploy the `dist` folder.
+This project is configured for automated deployment to GitHub Pages using a GitHub Actions workflow.
+
+### How it Works
+
+- A push to the `main` branch automatically triggers the `deploy.yml` workflow.
+- The workflow builds the application and deploys the production-ready files from the `dist` directory to the `gh-pages` branch.
+- You can monitor the deployment progress in the **Actions** tab of your GitHub repository.
+
+Once the deployment is complete, your application will be available at `https://<your-username>.github.io/NutriLens/`.
